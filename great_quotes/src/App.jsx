@@ -1,14 +1,14 @@
-
+import Layout from "./Layout/Layout";
 import QuotesDetail from "./pages/QuotesDetail";
 import NewQuotes from "./pages/NewQuotes";
 import AllQuotes from "./pages/AllQuotes";
 import { Route, Switch, Redirect } from "react-router-dom";
-import AppName from "./components/Header/AppName";
+// import AppName from "./components/Header/AppName";
 
 function App() {
   return (
-    <>
-      <AppName></AppName>
+    <Layout>
+      {/* <AppName></AppName> */}
       <Switch>
         <Route path="/quotes" exact>
           <AllQuotes></AllQuotes>
@@ -22,7 +22,7 @@ function App() {
         <Redirect to="/quotes"></Redirect>
       </Switch>
       
-    </>
+    </Layout>
   );
 }
 
