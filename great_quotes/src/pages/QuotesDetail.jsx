@@ -7,13 +7,13 @@ const QuotesDetail = () => {
    const arr = useParams();
 
   return (
-    <section>
+    <center>
         <h2> You are on Quotes Details Page. </h2>
         <p> {arr.quotesId} </p>
         <Route path={`/quotes/${arr.quotesId}/comment`}>
           <Comment></Comment>
         </Route>
-    </section>
+    </center>
   )
 }
 

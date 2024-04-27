@@ -2,7 +2,9 @@
 
 const AllQuotes = () => {
   return (
-    <h2> You are on All Quotes Page. </h2>
+    <center>
+      <h2> You are on All Quotes Page. </h2>
+    </center>
   )
 }
 
