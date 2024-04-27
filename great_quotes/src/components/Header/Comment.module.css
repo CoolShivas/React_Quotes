@@ -1,0 +1,23 @@
+.comment_div{
+    background-color: #E1ACAC;
+    
+    width: 400px;
+    height: 300px;
+    position: relative;
+    left: 25%;
+    
+    & .comment_section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    & .comment_btn{
+        background-color: #2C4E80;
+        padding: 5px;
+        color: white;
+    }
+}
