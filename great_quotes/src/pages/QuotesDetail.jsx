@@ -2,7 +2,7 @@
 
 const QuotesDetail = () => {
   return (
-    <div>QuotesDetail</div>
+    <h2> You are on Quotes Details Page. </h2>
   )
 }
 
