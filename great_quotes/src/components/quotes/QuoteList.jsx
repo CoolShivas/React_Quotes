@@ -3,6 +3,22 @@ import classes from "./QuoteList.module.css";
 import QuoteItems from "./QuoteItems";
 
 
+
+
+const sortingTheQuotes = (thought, ascendOrd) =>{
+  return thought.sort((crr, drr)=>{
+    if(ascendOrd)
+    {
+      return crr.id > drr.id ? 1 : -1 ;
+    }
+    else 
+    {
+      return crr.id < drr.id ? 1 : -1 ;
+    }
+  })
+};
+
+
 const QuoteList = ({dummyData}) => {
 
   const oldHistory = useHistory();
@@ -16,22 +32,26 @@ const QuoteList = ({dummyData}) => {
 
   const isSortingAscending = queryParams.get('arrange') === 'asc' ;
 
+  const sortedQuotesFinally = sortingTheQuotes(dummyData, isSortingAscending);
+
   const handlerOnSorting = () =>{
     console.log("location",currLocation);
-    oldHistory.push(`/quotes?arrange=` + (isSortingAscending ? 'desc' : 'asc'));
+    oldHistory.push(`/quotes?arrange=` + (isSortingAscending ? 'desc' : 'asc'));// Here, btn changes there name to Sort Ascending and Sort Descending;
+
     // // oldHistory.push() allow us to use the back button to go back to the previous url whereas replace provide only the new url and doesn't allow us to go back;
   };
 
   return (
     <>
     <div className={classes.quote_list__sorting}>
-      <button onClick={handlerOnSorting}>
+      <button onClick={handlerOnSorting}
+      className={classes.btn_sorting}>
         {/* Sort Ascending  */}
         Sort {isSortingAscending ? 'Descending' : 'Ascending'}
       </button>
     </div>
     <ul className={classes.quote_list__div}>
-      {dummyData.map((arr)=>{
+      {sortedQuotesFinally.map((arr)=>{
         return <QuoteItems key={arr.id}
         idABC={arr.id}
         authorABC={arr.author}
