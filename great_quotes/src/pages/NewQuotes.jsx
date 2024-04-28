@@ -1,10 +1,16 @@
+import {useHistory} from "react-router-dom" ;
 import QuoteForm from "../components/quotes/QuoteForm";
 
 const NewQuotes = () => {
 
+  const newHistory = useHistory();
+
   const additionOfQuotes = (authText)=>{
     console.log(authText);
+    newHistory.push(`/quotes`);
   };
+
+  
 
   return (
     <center>
