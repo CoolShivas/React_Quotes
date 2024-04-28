@@ -1,0 +1,5 @@
+.quote_list__div{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+}

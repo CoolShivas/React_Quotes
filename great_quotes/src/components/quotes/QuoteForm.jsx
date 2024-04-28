@@ -1,3 +1,4 @@
+import classes from "./QuoteForm.module.css";
 import { useRef } from "react";
 
 
@@ -19,25 +20,25 @@ const QuoteForm = ({additionOfQuotesABC}) => {
     };
 
   return (
-    <form className="form" onSubmit={handlerOnSubmitForm}>
-        <div className="loading">
+    <form className={classes.quote_form} onSubmit={handlerOnSubmitForm}>
+        <div className={classes.quoteForm_loading}>
             Loading...
         </div>
 
-        <div className="control">
+        <div className={classes.control}>
             <label htmlFor="author"> Author </label>
             <input type="text" id="author" 
             ref={authorInputRef}/>
         </div>
 
-        <div className="control">
+        <div className={classes.control}>
             <label htmlFor="text"> Text </label>
             <textarea name="text" id="text" cols="30" rows="5" ref={textInputRef}
             ></textarea>
         </div>
 
-        <div className="control">
-           <button className="add_quote__btn" type="submit"> Add Quote </button>
+        <div className={classes.control}>
+           <button className={classes.add_quote__btn} type="submit"> Add Quote </button>
         </div>
     </form>
   )
