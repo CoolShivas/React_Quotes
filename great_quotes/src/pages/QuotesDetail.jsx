@@ -1,3 +1,4 @@
+import NotFound from "./NotFound";
 import classes from "./QuotesDetail.module.css";
 import HighlightedQuote from "../components/quotes/HighlightedQuote";
 import Comment from "../components/Header/Comment";
@@ -19,11 +20,7 @@ const QuotesDetail = () => {
 
    if(!dataDummy)
    {
-    return (<center> 
-      <div className={classes.span_conditional}>
-      No quotes found !
-      </div> 
-      </center>);
+      return (<NotFound/>)
    }
 
   return (
