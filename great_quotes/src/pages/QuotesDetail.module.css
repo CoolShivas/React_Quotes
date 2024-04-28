@@ -1,0 +1,11 @@
+.span_conditional{
+    background-color: red;
+    color: snow;
+    font-size: 30px;
+    padding: 1rem;
+    margin-top: 20px;
+
+    position: relative;
+    width: 50%;
+
+}

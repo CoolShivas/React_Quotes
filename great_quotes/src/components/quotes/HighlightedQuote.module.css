@@ -1,0 +1,10 @@
+.highlighted{
+    background-color: #5D0E41;
+    color: white;
+    position: relative;
+    width: 50%;
+    height: 100px;
+    padding: 1rem;
+    font-size: 25px;
+    margin-top: 20px;
+}
